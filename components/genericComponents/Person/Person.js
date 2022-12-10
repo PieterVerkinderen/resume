@@ -16,8 +16,8 @@ export default class Person extends Component {
 						<div className={[css["box"], css["head"]].join(" ")}>
 							<h1>Resume {this.props.blok.title} {this.props.blok.lastname} {this.props.blok.firstname}</h1>
 						</div>
-						<div className={[css["box"], css["sidebar"]].join(" ")}>
-							<div className={css["personalimage"]}><img src={this.props.blok.photo.filename} /></div>
+						<div className={[css["box"], css["sidebar"]].join(" ")} >
+							<div className={css["personalimage"]}><img src={this.props.blok.image.filename} /></div>
 							<div className={css["personaldetails"]}>
 								<div className={css["personaldetailitem"]}>{this.props.blok.title} {this.props.blok.firstname} {this.props.blok.lastname}</div>
 								<div className={css["personaldetailitem"]}>{this.props.blok.dateofbirth}</div>
@@ -25,7 +25,7 @@ export default class Person extends Component {
 							</div>
 						</div>
 						<div className={[css["box"], css["experience"]].join(" ")}>
-							<h2>Experience</h2>
+							<h2>Experience TEST 1</h2>
 							{this.props.blok.experiences.map((nestedBlok) => (
 								<StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
 							))}
